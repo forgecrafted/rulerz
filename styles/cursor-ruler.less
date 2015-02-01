@@ -1,0 +1,18 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.rulerz {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+}
+
+.pane.active .rulerz {
+  border-left: 0px solid @text-color-subtle;
+}

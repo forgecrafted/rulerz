@@ -1,0 +1,12 @@
+{
+  "name": "rulerz",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "Places rulers under each cursor.",
+  "repository": "https://github.com/forgecrafted/rulerz",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}
