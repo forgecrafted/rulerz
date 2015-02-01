@@ -4,6 +4,8 @@
 
 A simple Atom package to mark each of your cursors with a vertical ruler. Inspired by the Sublime Text plugin [CursorRuler](https://github.com/icylace/CursorRuler).
 
+[![forge software](https://cloud.githubusercontent.com/assets/281467/5994471/d3648c72-aa42-11e4-8916-bdd4705ed55c.gif)](http://www.forgecrafted.com)
+
 ## Configuration
 
 Configure rulerz in the package settings (`ctrl-,`) dialog, or manually in your `config.cson`. The following settings are currently supported:
