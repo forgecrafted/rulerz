@@ -32,7 +32,7 @@ Example:
 
 [![forge software](http://www.forgecrafted.com/logo.png)](http://www.forgecrafted.com)
 
-rulerz is maintained and funded by [Forge Software (forgecrafted.com)](http://www.forgecrafted.com)
+rulerz is maintained and funded by [Forge Software (forgecrafted.com)](http://www.forgecrafted.com).
 
 If you like our code, please give us a hollar if your company needs outside pro's who can write good code AND run servers at the same time!
 
