@@ -2,9 +2,9 @@
 
 ##### By the guys at [Forge Software](http://www.forgecrafted.com/)
 
-A simple Atom package to mark each of your cursors with a vertical ruler. Inspired by the Sublime Text plugin [CursorRuler](https://github.com/icylace/CursorRuler).
+A simple Atom [package](https://atom.io/packages/rulerz) to mark each of your cursors with a vertical ruler. Inspired by the Sublime Text plugin [CursorRuler](https://github.com/icylace/CursorRuler).
 
-[![forge software](https://cloud.githubusercontent.com/assets/281467/5994471/d3648c72-aa42-11e4-8916-bdd4705ed55c.gif)](http://www.forgecrafted.com)
+[![screencast gif](https://cloud.githubusercontent.com/assets/281467/5994471/d3648c72-aa42-11e4-8916-bdd4705ed55c.gif)](http://www.forgecrafted.com)
 
 ## Configuration
 
