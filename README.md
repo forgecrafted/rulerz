@@ -28,6 +28,16 @@ Example:
     width: 1
 ```
 
+## Contributing
+
+Patches welcome and encouraged.
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
 ## Credits
 
 [![forge software](http://www.forgecrafted.com/logo.png)](http://www.forgecrafted.com)
