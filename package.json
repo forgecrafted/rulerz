@@ -1,8 +1,8 @@
 {
   "name": "rulerz",
   "main": "./lib/main",
-  "version": "0.1.1",
-  "description": "Place a ruler under each cursor.",
+  "version": "0.1.2",
+  "description": "Mark each cursor with a vertical ruler.",
   "repository": "https://github.com/forgecrafted/rulerz",
   "license": "MIT",
   "engines": {
