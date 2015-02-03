@@ -30,6 +30,8 @@ Example:
 
 ## Contributing
 
+Please [report any issues on Github](https://github.com/forgecrafted/rulerz/issues).
+
 Patches welcome and encouraged.
 
 1. Fork it
