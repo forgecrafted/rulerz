@@ -37,7 +37,7 @@ class CursorModel
 
   # Proxy a cursorDidChangePosition event, passing a Point
   change: (event) ->
-    @emitter.emit 'did-change', event.newScreenPosition
+    @emitter.emit 'did-change', event.newBufferPosition
 
   # Clean up.
   destroy: ->
