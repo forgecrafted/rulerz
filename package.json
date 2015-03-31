@@ -1,7 +1,7 @@
 {
   "name": "rulerz",
   "main": "./lib/main",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Mark each cursor with a vertical ruler.",
   "repository": "https://github.com/forgecrafted/rulerz",
   "license": "MIT",
