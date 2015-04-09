@@ -32,7 +32,8 @@ class RulerView extends HTMLElement
 
   # Change the left alignment of the ruler.
   update: (point) ->
-    position = @model.getCursor().editor.pixelPositionForScreenPosition point
+    view        = atom.views.getView @model.getCursor().editor
+    position    = view.pixelPositionForScreenPosition point
     @style.left = position.left + 'px'
 
   # Clean up.
