@@ -20,6 +20,10 @@ class RulerView extends HTMLElement
   insert: ->
     editor_view = atom.views.getView(@model.getCursor().editor)
     underlayer = editor_view.getElementsByClassName('underlayer')[0]
+    if !underlayer
+      underlayer = document.createElement("div")
+      underlayer.className = "underlayer"
+      editor_view.appendChild(underlayer)
     underlayer.appendChild @
 
   subscribe: ->
