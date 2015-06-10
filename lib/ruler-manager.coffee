@@ -1,6 +1,6 @@
 {Emitter, CompositeDisposable} = require 'atom'
-CursorModel = require './cursor-model.coffee'
-RulerView = require './ruler-view.coffee'
+CursorModel                    = require './cursor-model.coffee'
+RulerView                      = require './ruler-view.coffee'
 
 module.exports =
 class RulerManager
@@ -9,8 +9,8 @@ class RulerManager
 
   constructor: ->
     @subscriptions = new CompositeDisposable
-    @emitter = new Emitter
-    @models = []
+    @emitter       = new Emitter
+    @models        = []
     @initialize()
     @handleEvents()
 

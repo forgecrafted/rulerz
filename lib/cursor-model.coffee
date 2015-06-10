@@ -9,9 +9,9 @@ class CursorModel
 
   constructor: (manager, cursor) ->
     @subscriptions = new CompositeDisposable
-    @emitter = new Emitter
-    @manager = manager
-    @cursor = cursor
+    @emitter       = new Emitter
+    @manager       = manager
+    @cursor        = cursor
     @initialize()
     @subscribe()
 
