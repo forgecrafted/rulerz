@@ -3,6 +3,7 @@
 class RulerView extends HTMLElement
   subscriptions: null
   model: null
+  editor: null
 
   createdCallback: ->
     @classList.add 'rulerz'
@@ -16,15 +17,16 @@ class RulerView extends HTMLElement
     # Set the initial positioning.
     @update @model.getCursor().getScreenPosition()
 
+  getEditor: ->
+    @editor = atom.views.getView @model.getCursor().editor
+
+  getEditorRoot: ->
+    @getEditor()
+    @editor.shadowRoot ? @editor
+
   # Insert the view into the TextEditors underlayer.
   insert: ->
-    editor_view = atom.views.getView(@model.getCursor().editor)
-    underlayer  = editor_view.getElementsByClassName('underlayer')[0]
-    if !underlayer
-      underlayer           = document.createElement('div')
-      underlayer.className = 'underlayer'
-      editor_view.appendChild(underlayer)
-    underlayer.appendChild @
+    @getEditorRoot().appendChild @
 
   subscribe: ->
     # Watch the cursor for changes.
@@ -36,7 +38,7 @@ class RulerView extends HTMLElement
 
   # Change the left alignment of the ruler.
   update: (point) ->
-    view        = atom.views.getView @model.getCursor().editor
+    view        = @getEditor()
     position    = view.pixelPositionForScreenPosition point
     @style.left = position.left + 'px'
 

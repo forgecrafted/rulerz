@@ -4,15 +4,14 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.rulerz {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 100px;
-}
-
-atom-pane.active .rulerz {
-  border-left: 0px solid @text-color-subtle;
+atom-text-editor.is-focused::shadow {
+  ruler-view.rulerz {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 100px;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid @text-color-subtle;
+  }
 }
