@@ -2,8 +2,10 @@
 
 class RulerView extends HTMLElement
   subscriptions: null
-  model: null
-  editor: null
+  model:         null
+  editor:        null
+  editor_root:   null
+  lines:         null
 
   createdCallback: ->
     @classList.add 'rulerz'
@@ -19,15 +21,14 @@ class RulerView extends HTMLElement
 
   getEditor: ->
     @editor = atom.views.getView @model.getCursor().editor
-
-  getEditorRoot: ->
-    @getEditor()
-    @editor.shadowRoot ? @editor
+    root    = @editor.shadowRoot ? @editor
+    @lines  = root.querySelector '.scroll-view .lines'
+    @editor
 
   # Insert the view into the TextEditors underlayer.
   insert: ->
-    lines = @getEditorRoot().querySelector '.scroll-view .lines'
-    lines.appendChild @
+    @getEditor() unless @lines
+    @lines.appendChild @
 
   subscribe: ->
     # Watch the cursor for changes.
