@@ -4,7 +4,6 @@ class RulerView extends HTMLElement
   subscriptions: null
   model:         null
   editor:        null
-  editor_root:   null
   lines:         null
 
   createdCallback: ->
