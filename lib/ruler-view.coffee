@@ -26,7 +26,8 @@ class RulerView extends HTMLElement
 
   # Insert the view into the TextEditors underlayer.
   insert: ->
-    @getEditorRoot().appendChild @
+    lines = @getEditorRoot().querySelector '.scroll-view .lines'
+    lines.appendChild @
 
   subscribe: ->
     # Watch the cursor for changes.
