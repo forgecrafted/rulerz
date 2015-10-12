@@ -19,13 +19,26 @@ Example:
     enabled: true
 ```
 
-#### width (*integer*) - the width (in pixels) of each ruler
+## Styles
 
-Example:
+You can change the appearance of the rulers by adding a rule to your stylesheet (File -> Open your Stylesheet). For example:
 
-```coffee
-  rulerz:
-    width: 1
+```less
+atom-text-editor.is-focused::shadow {
+  ruler-view.rulerz {
+    border-left: 1px solid black;
+  }
+}
+```
+
+The default color is taken from the variable `@text-color-subtle`. By continuing to base your ruler color on this value (modified with LESS functions), your ruler will match whatever syntax theme you have active:
+
+```less
+atom-text-editor.is-focused::shadow {
+  ruler-view.rulerz {
+    border-left: 1px dotted fade(mix(@text-color-subtle, limegreen), 5%);
+  }
+}
 ```
 
 ## Contributing

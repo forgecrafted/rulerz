@@ -8,7 +8,6 @@ class RulerView extends HTMLElement
 
   createdCallback: ->
     @classList.add 'rulerz'
-    @style['border-left-width'] = atom.config.get('rulerz.width') + 'px'
 
   initialize: (model) ->
     @subscriptions = new CompositeDisposable
@@ -33,9 +32,6 @@ class RulerView extends HTMLElement
     # Watch the cursor for changes.
     @subscriptions.add @model.onDidChange @update.bind(@)
     @subscriptions.add @model.onDidDestroy @destroy.bind(@)
-    # Watch the config for changes.
-    @subscriptions.add atom.config.observe 'rulerz.width', (newValue) =>
-      @style['border-left-width'] = newValue + 'px'
 
   # Change the left alignment of the ruler.
   update: (point) ->

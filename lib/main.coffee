@@ -9,10 +9,6 @@ module.exports =
       title: 'Display a Ruler on each Cursor'
       type: 'boolean'
       default: true
-    width:
-      title: 'Width of each Ruler (in pixels)'
-      type: 'integer'
-      default: 1
 
   activate: ->
     @subscriptions = new CompositeDisposable
