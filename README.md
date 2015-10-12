@@ -8,7 +8,7 @@ A simple Atom [package](https://atom.io/packages/rulerz) to mark each of your cu
 
 ## Styles
 
-You can change the appearance of the rulers by adding a rule to your stylesheet (File -> Open your Stylesheet). For example:
+You can change the appearance of the rulers by adding a rule to [your stylesheet](https://atom.io/docs/latest/using-atom-basic-customization#style-tweaks). For example:
 
 ```less
 atom-text-editor.is-focused::shadow {
