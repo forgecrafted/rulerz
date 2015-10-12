@@ -6,19 +6,6 @@ A simple Atom [package](https://atom.io/packages/rulerz) to mark each of your cu
 
 [![screencast gif](https://cloud.githubusercontent.com/assets/281467/5994471/d3648c72-aa42-11e4-8916-bdd4705ed55c.gif)](http://www.forgecrafted.com)
 
-## Configuration
-
-Configure rulerz in the package settings (`ctrl-,`) dialog, or manually in your `config.cson`. The following settings are currently supported:
-
-#### enabled (*boolean*) - turn rulerz on or off
-
-Example:
-
-```coffee
-  rulerz:
-    enabled: true
-```
-
 ## Styles
 
 You can change the appearance of the rulers by adding a rule to your stylesheet (File -> Open your Stylesheet). For example:
