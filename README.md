@@ -6,26 +6,26 @@ A simple Atom [package](https://atom.io/packages/rulerz) to mark each of your cu
 
 [![screencast gif](https://cloud.githubusercontent.com/assets/281467/5994471/d3648c72-aa42-11e4-8916-bdd4705ed55c.gif)](http://www.forgecrafted.com)
 
-## Configuration
+## Styles
 
-Configure rulerz in the package settings (`ctrl-,`) dialog, or manually in your `config.cson`. The following settings are currently supported:
+You can change the appearance of the rulers by adding a rule to [your stylesheet](https://atom.io/docs/latest/using-atom-basic-customization#style-tweaks). For example:
 
-#### enabled (*boolean*) - turn rulerz on or off
-
-Example:
-
-```coffee
-  rulerz:
-    enabled: true
+```less
+atom-text-editor.is-focused::shadow {
+  ruler-view.rulerz {
+    border-left: 1px solid black;
+  }
+}
 ```
 
-#### width (*integer*) - the width (in pixels) of each ruler
+The default color is taken from the variable `@text-color-subtle`. By continuing to base your ruler color on this value (modified with LESS functions), your ruler will match whatever syntax theme you have active:
 
-Example:
-
-```coffee
-  rulerz:
-    width: 1
+```less
+atom-text-editor.is-focused::shadow {
+  ruler-view.rulerz {
+    border-left: 1px dotted fade(mix(@text-color-subtle, limegreen), 5%);
+  }
+}
 ```
 
 ## Contributing
