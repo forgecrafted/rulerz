@@ -1,15 +1,15 @@
 // The ui-variables file is provided by base themes provided by Atom.
 //
-// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// See https://github.com/atom/one-dark-syntax/blob/master/styles/syntax-variables.less
 // for a full listing of what's available.
-@import "ui-variables";
+@import "syntax-variables";
 
 atom-text-editor.is-focused::shadow {
   ruler-view.rulerz {
     position: absolute;
     display: block;
     height: 100%;
-    border-left: 1px dashed fade(@text-color-subtle, 30%);
+    border-left: 1px solid @syntax-cursor-line;
     z-index: 1;
   }
 }
