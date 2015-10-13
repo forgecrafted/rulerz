@@ -26,6 +26,7 @@ class RulerView extends HTMLElement
   # Insert the view into the TextEditors underlayer.
   insert: ->
     @getEditor() unless @lines
+    return unless @lines # temporary band-aid for https://github.com/forgecrafted/rulerz/issues/12
     @lines.appendChild @
 
   subscribe: ->
