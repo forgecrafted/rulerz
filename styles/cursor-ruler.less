@@ -4,6 +4,9 @@
 // for a full listing of what's available.
 @import "syntax-variables";
 
+.ensure-syntax-cursor-line() {@syntax-cursor-line: @syntax-gutter-background-color-selected;}
+.ensure-syntax-cursor-line(); // exposes variable only if it's not already in this scope
+
 atom-text-editor.is-focused::shadow {
   ruler-view.rulerz {
     position: absolute;
