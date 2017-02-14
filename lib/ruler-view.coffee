@@ -19,7 +19,7 @@ class RulerView extends HTMLElement
 
   getEditor: ->
     @editor = atom.views.getView @model.getCursor().editor
-    root    = @editor.shadowRoot ? @editor
+    root    = @editor.syntax ? @editor
     @lines  = root.querySelector '.scroll-view .lines'
     @editor
 
