@@ -39,6 +39,7 @@ class RulerView extends HTMLElement
     view        = @getEditor()
     position    = view.pixelPositionForScreenPosition point
     @style.left = position.left + 'px'
+    @insert()
 
   # Clean up.
   destroy: ->
