@@ -11,7 +11,7 @@ A simple Atom [package](https://atom.io/packages/rulerz) to mark each of your cu
 You can change the appearance of the rulers by adding a rule to [your stylesheet](https://atom.io/docs/latest/using-atom-basic-customization#style-tweaks). For example:
 
 ```less
-atom-text-editor.is-focused::shadow {
+atom-text-editor.is-focused.editor {
   ruler-view.rulerz {
     border-left: 1px solid black;
   }
@@ -21,7 +21,7 @@ atom-text-editor.is-focused::shadow {
 The default color is taken from the variable `@text-color-subtle`. By continuing to base your ruler color on this value (modified with LESS functions), your ruler will match whatever syntax theme you have active:
 
 ```less
-atom-text-editor.is-focused::shadow {
+atom-text-editor.is-focused.editor {
   ruler-view.rulerz {
     border-left: 1px dotted fade(mix(@text-color-subtle, limegreen), 5%);
   }
