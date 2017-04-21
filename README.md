@@ -8,9 +8,10 @@ A simple Atom [package](https://atom.io/packages/rulerz) to mark each of your cu
 
 ## Styles
 
-You can change the appearance of the rulers by adding a rule to [your stylesheet](https://atom.io/docs/latest/using-atom-basic-customization#style-tweaks). For example:
+The default appearance of the ruler is based on the *current line highlight* color. If this is too subtle for you or you like to change the appearance in any other way, you can add a rule to [your stylesheet](https://atom.io/docs/latest/using-atom-basic-customization#style-tweaks). For example:
 
-```less
+```css
+
 atom-text-editor.is-focused::shadow {
   ruler-view.rulerz {
     border-left: 1px solid black;
@@ -18,15 +19,19 @@ atom-text-editor.is-focused::shadow {
 }
 ```
 
-The default color is taken from the variable `@text-color-subtle`. By continuing to base your ruler color on this value (modified with LESS functions), your ruler will match whatever syntax theme you have active:
+The default color is taken from the syntax variable `@syntax-cursor-line`. By continuing to base your ruler color on this value (modified with LESS functions), your ruler will match whatever syntax theme you have active:
 
-```less
+```css
+@import "syntax-variables";
+
 atom-text-editor.is-focused::shadow {
   ruler-view.rulerz {
-    border-left: 1px dotted fade(mix(@text-color-subtle, limegreen), 5%);
+    border-left: 1px dotted mix(@syntax-cursor-line, limegreen, 80%);
   }
 }
 ```
+
+Note that older themes may not define `@syntax-cursor-line`.
 
 ## Contributing
 
