@@ -1,5 +1,7 @@
 # rulerz
 
+[Looking for new maintainer] - as of this writing (2017-07-24) we no longer use Atom day-to-day, and would love to transfer the Rulerz package to a new maintainer.
+
 ##### By the guys at [Forge Software](http://www.forgecrafted.com/)
 
 A simple Atom [package](https://atom.io/packages/rulerz) to mark each of your cursors with a vertical ruler. Inspired by the Sublime Text plugin [CursorRuler](https://github.com/icylace/CursorRuler).
