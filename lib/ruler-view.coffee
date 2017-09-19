@@ -1,4 +1,7 @@
-{CompositeDisposable} = require 'atom'
+{CompositeDisposable, Point} = require 'atom'
+
+# Set this to true to enable debugging `console.log()` calls in this file
+debug = false
 
 class RulerView extends HTMLElement
   subscriptions: null
@@ -37,8 +40,21 @@ class RulerView extends HTMLElement
   # Change the left alignment of the ruler.
   update: (point) ->
     view        = @getEditor()
-    position    = view.pixelPositionForScreenPosition point
-    @style.left = position.left + 'px'
+    # It looks like `view.pixelPositionForScreenPosition` is potentially a
+    # private API and should not be used by plugins. It intermittently throws on
+    # startup, or very quickly after startup. To workaround, we wrap it in a
+    # try, and do nothing if it throws.
+    try
+      position    = view.pixelPositionForScreenPosition point
+      @style.left = position.left + 'px'
+    catch e
+      console.error 'rulerz caught', e if debug
+      setTimeout =>
+        try
+          position    = view.pixelPositionForScreenPosition point
+          @style.left = position.left + 'px'
+        catch e
+          console.error 'rulerz caught twice', e if debug
 
   # Clean up.
   destroy: ->
