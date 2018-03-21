@@ -1,6 +1,6 @@
 # rulerz
 
-[Looking for new maintainer] - as of this writing (2017-07-24) we no longer use Atom day-to-day, and would love to transfer the Rulerz package to a new maintainer.
+[Looking for new maintainer] - [@chmac](https://github.com/chmac) has taken on maintenance on a "best effort" basis. If anyone is motivated to take over maintenance of this package, please reach out in an issue.
 
 ##### By the guys at [Forge Software](http://www.forgecrafted.com/)
 
